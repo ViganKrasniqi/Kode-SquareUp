@@ -1,0 +1,16 @@
+{
+    "idempotency_key": "insert-idempotency-key-here",
+    "item_data": {
+      "name": "Test Item",
+      "variations": [
+        {
+          "name": "Test Variation",
+          "pricing_type": "FIXED_PRICING",
+          "price_money": {
+            "amount": 100,
+            "currency": "USD"
+          }
+        }
+      ]
+    }
+  }
