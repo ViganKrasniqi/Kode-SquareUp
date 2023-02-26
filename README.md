@@ -47,20 +47,19 @@ cypress/
 
 ## Test analysis
 
- <b>The file Authorization has two test cases</b>  :
+ **The file Authorization has two test cases**  :
 1. Send e request with valid credentials and the Bearer Auth, and check for status code 200 (Positive test case)
 2. Send e request with no Auth and check for status code 403 (Negative test case)
-
-<b>The file Data_Validation has 4 test cases</b> :
+**The file Data_Validation has 4 test cases**:
 1. Should reject invalid requests with appropriate error messages
 2. should reject requests with missing parameters with appropriate error messages
 3. should reject requests with invalid parameters with appropriate error messages
 4. should validate successful requests with appropriate success messages
 
-<b> The file Pagination has 1 test cases </b> :
+**The file Pagination has 1 test cases** :
 1. should paginate large data sets correctly
 
-<b>The file Reports has 2 test cases</b> :
+**The file Reports has 2 test cases** :
 1. should verify that the Square API can generate an item sales report
 1. should verify that the Square API can generate a custom date range report
 
