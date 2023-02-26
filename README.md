@@ -50,6 +50,7 @@ cypress/
  **The file Authorization has two test cases**  :
 1. Send e request with valid credentials and the Bearer Auth, and check for status code 200 (Positive test case)
 2. Send e request with no Auth and check for status code 403 (Negative test case)
+
 **The file Data_Validation has 4 test cases**:
 1. Should reject invalid requests with appropriate error messages
 2. should reject requests with missing parameters with appropriate error messages
