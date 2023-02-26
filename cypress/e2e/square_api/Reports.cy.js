@@ -1,9 +1,9 @@
 import '../../support/index';
-import { API_TOKEN } from '../../fixtures/constant'
+import { API_TOKEN, startDate, endDate } from '../../fixtures/constant'
 import item from '../../fixtures/item.json'
 
 
-describe('Authorization tests', () => {
+describe('Report tests', () => {
 
 
   it('should verify that the Square API can generate an item sales report', () => {
@@ -31,8 +31,7 @@ describe('Authorization tests', () => {
         }).then(response => {
           expect(response.status).to.eq(200);
           const itemId = response.body.item.id;
-          const startDate = '2023-02-01T00:00:00Z';
-          const endDate = '2023-02-21T23:59:59Z';
+          
 
           cy.request({
             method: 'GET',
@@ -53,12 +52,10 @@ describe('Authorization tests', () => {
         });
       } else {
         const itemId = response.body.objects[0].id;
-        const startDate = '2023-02-01T00:00:00Z';
-        const endDate = '2023-02-21T23:59:59Z';
 
         cy.request({
           method: 'GET',
-          url: `https://connect.squareup.com/v2/reports/item-sales`,
+          url: Cypress.env('reports_item_sales'),
           headers: {
             'Authorization': `Bearer ${API_TOKEN}`
           },
@@ -78,12 +75,10 @@ describe('Authorization tests', () => {
 
 
   it('should verify that the Square API can generate a custom date range report', () => {
-    const startDate = '2023-02-01T00:00:00Z';
-    const endDate = '2023-02-21T23:59:59Z';
 
     cy.request({
       method: 'GET',
-      url: `https://connect.squareup.com/v2/reports/sales`,
+      url: Cypress.env('reports_sales'),
       headers: {
         'Authorization': `Bearer ${API_TOKEN}`
       },
