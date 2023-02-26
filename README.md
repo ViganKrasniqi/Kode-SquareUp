@@ -62,7 +62,7 @@ cypress/
 
 **The file Reports has 2 test cases** :
 1. should verify that the Square API can generate an item sales report
-1. should verify that the Square API can generate a custom date range report
+2. should verify that the Square API can generate a custom date range report
 
 ## Suggestions for improvements:
 
